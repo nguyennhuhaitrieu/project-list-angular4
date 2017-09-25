@@ -12,7 +12,7 @@ export class ControlComponent {
   @Output("typeCurrentcyChange") typeCurrentcyChange = new EventEmitter<string>();
 
   valueSummary: string[] = ["Small","Medium","Full"];
-  valueCurrency: string[] = ["vnd","usd","Euro"];
+  valueCurrency: string[] = ["vnd","usd","euro"];
 
   settingSummary(value: any) {
     this.typeSummaryChange.emit(value);

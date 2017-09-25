@@ -1,7 +1,7 @@
 <form class="navbar-form navbar-right" role="search">
   <div class="form-group">
     <label>Summary Type: </label>
-      <select #selectSummary (change)="settingSummary(selectSummary.value)"   class="form-control" name="typeSummary">
+      <select #selectSummary (change)="settingSummary(selectSummary.value)"  class="form-control" name="typeSummary">
           <option *ngFor ="let item of valueSummary; let i = index" value = "{{ i }}" [selected]="i == typeSummary">{{ item }}</option>
 
       </select>
@@ -10,7 +10,7 @@
   <div class="form-group">
     <label>Currency: </label>
     <select #selectCurrentcy (change)="settingCurrentcy(selectCurrentcy.value)" class="form-control" name="typeCurrency">
-      <option *ngFor ="let item of valueCurrency  let i = index" [selected]="i == typeCurrency">{{ item | uppercase }}</option>
+      <option *ngFor ="let item of valueCurrency" value ="{{ item }}" [selected]="item == typeCurrency">{{ item | uppercase }}</option>
     </select>
   </div>
   </form>
