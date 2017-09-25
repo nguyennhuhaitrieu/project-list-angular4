@@ -7,4 +7,6 @@ import { Course } from './../define/course.class' ;
 })
 export class CourseComponent {
   @Input ("course") courseObj: Course;
+  @Input("typeSummary") typeSummary: number;
+  @Input("typeCurrency") typeCurrency: string;
 }

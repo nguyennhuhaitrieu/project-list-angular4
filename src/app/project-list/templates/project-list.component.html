@@ -1,12 +1,24 @@
 <div class="panel panel-default">
   <div class="panel-heading">
-      <app-control-project-list></app-control-project-list>
+      <app-control-project-list
+        [typeSummary]  = "typeSummary"
+        [typeCurrency] = "typeCurrency"
+        (typeSummaryChange)="changeSummary($event)"
+        (typeCurrentcyChange)="changeCurrentcy($event)"
+      >
+
+      </app-control-project-list>
   </div>
 
   <div class="panel-body">
     <div class="row">
       <template ngFor let-course  [ngForOf]="courses">
-        <app-course [course]="course"></app-course>
+        <app-course
+          [course]="course"
+          [typeSummary]  = "typeSummary"
+          [typeCurrency] = "typeCurrency"
+        >
+        </app-course>
       </template>
       </div>
   </div>

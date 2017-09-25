@@ -7,6 +7,16 @@ import { Course } from './../define/course.class' ;
 })
 export class ProjectListComponent {
   courses: Course[] = [];
+  typeSummary: number = 1;
+  typeCurrency: string = "usd";
+
+  changeSummary(value: number) {
+    this.typeSummary = value;
+  }
+
+  changeCurrentcy(value: string) {
+    this.typeCurrency = value;
+  }
 
   constructor() {
     this.courses.push(

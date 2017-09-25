@@ -1,9 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-control-project-list',
   templateUrl: './../templates/control.component.html',
 })
 export class ControlComponent {
-  title = 'app';
+  @Input("typeSummary") typeSummary: number;
+  @Input("typeCurrency") typeCurrency: string;
+
+  @Output("typeSummaryChange") typeSummaryChange = new EventEmitter<number>();
+  @Output("typeCurrentcyChange") typeCurrentcyChange = new EventEmitter<string>();
+
+  valueSummary: string[] = ["Small","Medium","Full"];
+  valueCurrency: string[] = ["vnd","usd","Euro"];
+
+  settingSummary(value: any) {
+    this.typeSummaryChange.emit(value);
+  }
+
+  settingCurrentcy(value: any) {
+    this.typeCurrentcyChange.emit(value);
+  }
+
+  constructor() {
+
+  }
 }
