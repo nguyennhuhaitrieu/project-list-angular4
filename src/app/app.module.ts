@@ -6,6 +6,7 @@ import { ProjectListComponent } from './project-list/components/project-list.com
 import { ControlComponent } from './project-list/components/control.component';
 import { CourseComponent } from './project-list/components/course.component';
 import { CourseCapitalizePipe } from './project-list/pipes/courseCapitalize.pipe';
+import { CourseSummaryStringPipe } from './project-list/pipes/courseSummaryString.pipe';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { CourseCapitalizePipe } from './project-list/pipes/courseCapitalize.pipe
     ProjectListComponent,
     ControlComponent,
     CourseComponent,
-    CourseCapitalizePipe
+    CourseCapitalizePipe,
+    CourseSummaryStringPipe
   ],
   imports: [
     BrowserModule
