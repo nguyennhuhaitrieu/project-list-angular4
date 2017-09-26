@@ -4,13 +4,15 @@
       <div class="caption">
           <h3><a href="#">{{courseObj.name | courseCapitalize }}</a></h3>
           <p>{{ courseObj.summary | courseSummaryString:typeSummary }}</p>
-          <p>
-            <template ngFor let-category [ngForOf]="courseObj.cat">
-                <a href="#"><span class="label label-success">{{ category }}</span></a>
-            </template>
+          <p [innerHTML]="courseObj.cat | courseCategory">
           </p>
           <p class="text-right">
-            <a href="#" class="btn btn-danger" role="button">{{courseObj.price}} USD</a>
+            <template [ngIf]="typeCurrency==='usd'">
+                <a href="#" class="btn btn-danger" role="button">{{courseObj.price | currency:typeCurrency:true:'2.0-3'}} USD</a>
+            </template>
+            <template [ngIf]="typeCurrency==='vnd'">
+                <a href="#" class="btn btn-danger" role="button">{{(courseObj.price * 22700) | currency:typeCurrency:true:'2.0-0'}} VND</a>
+            </template>
           </p>
       </div>
   </div>

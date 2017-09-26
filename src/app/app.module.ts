@@ -7,6 +7,8 @@ import { ControlComponent } from './project-list/components/control.component';
 import { CourseComponent } from './project-list/components/course.component';
 import { CourseCapitalizePipe } from './project-list/pipes/courseCapitalize.pipe';
 import { CourseSummaryStringPipe } from './project-list/pipes/courseSummaryString.pipe';
+import { CourseCategoryPipe } from './project-list/pipes/courseCategory.pipe';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +17,8 @@ import { CourseSummaryStringPipe } from './project-list/pipes/courseSummaryStrin
     ControlComponent,
     CourseComponent,
     CourseCapitalizePipe,
-    CourseSummaryStringPipe
+    CourseSummaryStringPipe,
+    CourseCategoryPipe
   ],
   imports: [
     BrowserModule
