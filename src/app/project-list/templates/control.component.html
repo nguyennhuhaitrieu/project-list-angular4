@@ -3,7 +3,6 @@
     <label>Summary Type: </label>
       <select #selectSummary (change)="settingSummary(selectSummary.value)"  class="form-control" name="typeSummary">
           <option *ngFor ="let item of valueSummary; let i = index" value = "{{ i }}" [selected]="i == typeSummary">{{ item }}</option>
-
       </select>
   </div>
 
